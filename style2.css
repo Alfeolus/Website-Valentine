@@ -1,0 +1,99 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: pink;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 1s;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .happy {
+  visibility: hidden;
+}
+
+.cardFront {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2),
+    30px 0 50px rgba(0, 0, 0, 0.4);
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 20px 0; /* Jarak dari gambar */
+  background-image: pink;
+  transition: 0.1s;
+}
+
+/* Styling untuk gambar */
+.valentine-image {
+  width: 150px; /* Sesuaikan ukuran gambar */
+  height: 150px; /* Sesuaikan ukuran gambar */
+  border-radius: 50%; /* Membuat gambar bulat */
+  object-fit: cover; /* Memastikan gambar terisi dengan baik */
+  border: 3px solid #ff6b6b; /* Bingkai gambar */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  margin-top: 10px; /* Jarak dari tulisan */
+}
+
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 250px;
+  height: 350px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-family: "Brush Script MT", cursive;
+  margin: 40px;
+  color: #333;
+}
+
+.name {
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  color: #333;
+}
+
+.back {
+  font-family: Tahoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 30px;
+  outline-color: #333;
+  outline-style: dotted;
+}

@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+  font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.design-root {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.layout-container {
+  display: flex;
+  height: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  border-bottom: 1px solid #f4f0f2;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #181113;
+}
+
+.header-left h2 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.header-right {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-links a {
+  color: #181113;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f4f0f2;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 20px 40px;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("images/thumbnail.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.033em;
+  text-align: center;
+}
+
+.gallery-section {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gallery-section::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-item {
+  flex: 1;
+  min-width: 240px;
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.gallery-item p {
+  color: #181113;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.video-section {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+aspect-ratio: 16/9;
+background-image: url("images/bearlove.gif");
+background-size: cover;
+background-position: center;
+width: 500px;
+height: auto;
+}
+
+.play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.play-button svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+body.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+.icon-button {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
